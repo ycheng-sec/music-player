@@ -14,7 +14,7 @@ var isDrawerOpen = false,
   drawerBar,
   dawerProgress,
   isKorean = false,
-  baseUrl = "https://abdulmoqueet.github.io/music-player/",
+  baseUrl = "https://ycheng.cc/music-player/",
   accentColorAr = [
     "#ff4b66",
     "#62ff6e",
@@ -25,23 +25,23 @@ var isDrawerOpen = false,
     "#70de00",
     "#000000",
   ];
-
+// add one more song that does not need to appear to make other songs appear, seems song.length is not enough to show..
 var songs,
   english = [
     {
-      name: "On My Way",
-      singer: "Alan Walker",
-      duration: "03:13",
-      url: "songs/On_My_Way.mp3",
-      albumArt: "images/On_My_Way.jpg",
+      name: "有何不可",
+      singer: "",
+      duration: "02:25",
+      url: "songs/有何不可.mp3",
+      albumArt: "images/14.jpeg",
     },
 
     {
-      name: "Lily",
-      singer: "Alan Walker",
-      duration: "03:16",
-      url: "songs/Lily.mp3",
-      albumArt: "images/Lily.jpg",
+      name: "纸短情长，花开陌上",
+      singer: "",
+      duration: "02:28",
+      url: "songs/14 纸短情长，花开陌上.mp3",
+      albumArt: "images/6.jpeg",
     },
 
     {
@@ -51,143 +51,144 @@ var songs,
       url: "songs/End_Of_Time.mp3",
       albumArt: "images/End_Of_Time.jpg",
     },
-
-    {
-      name: "Alone Part II",
-      singer: "Alan Walker",
-      duration: "02:57",
-      url: "songs/Alone_Part_II.mp3",
-      albumArt: "images/Alone_Part_II.jpg",
-    },
-
-    {
-      name: "Sing Me To Sleep",
-      singer: "Alan Walker",
-      duration: "03:11",
-      url: "songs/Sing_Me_To_Sleep.mp3",
-      albumArt: "images/Sing_Me_To_Sleep.jpg",
-    },
-
-    {
-      name: "Ignite",
-      singer: "Alan Walker",
-      duration: "03:30",
-      url: "songs/Ignite.mp3",
-      albumArt: "images/Ignite.jpg",
-    },
-
-    {
-      name: "Faded",
-      singer: "Alan Walker",
-      duration: "03:32",
-      url: "songs/Faded.mp3",
-      albumArt: "images/Faded.jpg",
-    },
-
-    {
-      name: "Keep Holding On",
-      singer: "Avril Lavigne",
-      duration: "04:12",
-      url: "songs/Keep_Holding_On.mp3",
-      albumArt: "images/Keep_Holding_On.jpg",
-    },
-
-    {
-      name: "Give your heart a break",
-      singer: "Demi Lovato",
-      duration: "03:28",
-      url: "songs/Give_Your_Heart_a_Break.mp3",
-      albumArt: "images/Give_Your_Heart_a_Break.jpg",
-    },
-
-    {
-      name: "You are not alone",
-      singer: "Michael Jackson",
-      duration: "05:35",
-      url: "songs/You_Are_Not_Alone.mp3",
-      albumArt: "images/You_Are_Not_Alone.jpg",
-    },
-
-    {
-      name: "Skyscraper",
-      singer: "Demi Lovato",
-      duration: "03:11",
-      url: "songs/Skyscraper.mp3",
-      albumArt: "images/Skyscraper.jpg",
-    },
-
-    {
-      name: "Innocence",
-      singer: "Avril Lavigne",
-      duration: "03:50",
-      url: "songs/Innocence.mp3",
-      albumArt: "images/Keep_Holding_On.jpg",
-    },
-
-    {
-      name: "Wish you were here",
-      singer: "Avril Lavigne",
-      duration: "03:50",
-      url: "songs/Wish_You_Were_Here.mp3",
-      albumArt: "images/Wish_You_Were_Here.jpg",
-    },
-
-    {
-      name: "Heart Attack",
-      singer: "Demi Lovato",
-      duration: "03:29",
-      url: "songs/Heart_Attack.mp3",
-      albumArt: "images/Heart_Attack.jpg",
-    },
-
-    {
-      name: "Legends Never Die",
-      singer: "Alan Walker",
-      duration: "02:45",
-      url: "songs/Legends_Never_Die.mp3",
-      albumArt: "images/Legends_Never_Die.jpg",
-    },
-
-    {
-      name: "",
-      singer: "",
-      duration: "",
-      url: "",
-      albumArt: "",
-    },
+//
+//    {
+//      name: "Alone Part II",
+//      singer: "Alan Walker",
+//      duration: "02:57",
+//      url: "songs/Alone_Part_II.mp3",
+//      albumArt: "images/Alone_Part_II.jpg",
+//    },
+//
+//    {
+//      name: "Sing Me To Sleep",
+//      singer: "Alan Walker",
+//      duration: "03:11",
+//      url: "songs/Sing_Me_To_Sleep.mp3",
+//      albumArt: "images/Sing_Me_To_Sleep.jpg",
+//    },
+//
+//    {
+//      name: "Ignite",
+//      singer: "Alan Walker",
+//      duration: "03:30",
+//      url: "songs/Ignite.mp3",
+//      albumArt: "images/Ignite.jpg",
+//    },
+//
+//    {
+//      name: "Faded",
+//      singer: "Alan Walker",
+//      duration: "03:32",
+//      url: "songs/Faded.mp3",
+//      albumArt: "images/Faded.jpg",
+//    },
+//
+//    {
+//      name: "Keep Holding On",
+//      singer: "Avril Lavigne",
+//      duration: "04:12",
+//      url: "songs/Keep_Holding_On.mp3",
+//      albumArt: "images/Keep_Holding_On.jpg",
+//    },
+//
+//    {
+//      name: "Give your heart a break",
+//      singer: "Demi Lovato",
+//      duration: "03:28",
+//      url: "songs/Give_Your_Heart_a_Break.mp3",
+//      albumArt: "images/Give_Your_Heart_a_Break.jpg",
+//    },
+//
+//    {
+//      name: "You are not alone",
+//      singer: "Michael Jackson",
+//      duration: "05:35",
+//      url: "songs/You_Are_Not_Alone.mp3",
+//      albumArt: "images/You_Are_Not_Alone.jpg",
+//    },
+//
+//    {
+//      name: "Skyscraper",
+//      singer: "Demi Lovato",
+//      duration: "03:11",
+//      url: "songs/Skyscraper.mp3",
+//      albumArt: "images/Skyscraper.jpg",
+//    },
+//
+//    {
+//      name: "Innocence",
+//      singer: "Avril Lavigne",
+//      duration: "03:50",
+//      url: "songs/Innocence.mp3",
+//      albumArt: "images/Keep_Holding_On.jpg",
+//    },
+//
+//    {
+//      name: "Wish you were here",
+//      singer: "Avril Lavigne",
+//      duration: "03:50",
+//      url: "songs/Wish_You_Were_Here.mp3",
+//      albumArt: "images/Wish_You_Were_Here.jpg",
+//    },
+//
+//    {
+//      name: "Heart Attack",
+//      singer: "Demi Lovato",
+//      duration: "03:29",
+//      url: "songs/Heart_Attack.mp3",
+//      albumArt: "images/Heart_Attack.jpg",
+//    },
+//
+//    {
+//      name: "Legends Never Die",
+//      singer: "Alan Walker",
+//      duration: "02:45",
+//      url: "songs/Legends_Never_Die.mp3",
+//      albumArt: "images/Legends_Never_Die.jpg",
+//    },
+//
+//    {
+//      name: "",
+//      singer: "",
+//      duration: "",
+//      url: "",
+//      albumArt: "",
+//    },
   ];
 
 var korean = [
-  {
+
+    {
     name: "Tajdar-e-Haram",
     singer: "Atif Aslam",
     duration: "09:51",
     url: "songs/Hindi/Tajdar-e-Haram_Atif_Aslam.mp3",
     albumArt: "images/hindi/taj.jpg",
-  },
-
-  {
-    name: "Arziyan",
-    singer: "Jawed Ali",
-    duration: "08:42",
-    url: "",
-    albumArt: "",
-  },
-
-  {
-    name: "Rang Sharbato ka",
-    singer: "Atfi Aslam",
-    duration: "04:23",
-    url: "",
-    albumArt: "",
-  },
-  {
-    name: "",
-    singer: "",
-    duration: "",
-    url: "",
-    albumArt: "",
-  },
+    },
+//
+//  {
+//    name: "Arziyan",
+//    singer: "Jawed Ali",
+//    duration: "08:42",
+//    url: "",
+//    albumArt: "",
+//  },
+//
+//  {
+//    name: "Rang Sharbato ka",
+//    singer: "Atfi Aslam",
+//    duration: "04:23",
+//    url: "",
+//    albumArt: "",
+//  },
+//  {
+//    name: "",
+//    singer: "",
+//    duration: "",
+//    url: "",
+//    albumArt: "",
+//  },
 ];
 
 var currentProfile = {
@@ -430,15 +431,15 @@ function generateElements(ko) {
 
   if (ko) {
     songs = korean;
-    $(".left-pannel__anime").text("_Hindi");
+    $(".left-pannel__anime").text("_Other");
     $(".left-pannel__anime").css("color", currentProfile.accentColor);
-    $(".left-pannel__favorite").text("English");
+    $(".left-pannel__favorite").text("我的翻唱");
     $(".left-pannel__favorite").css("color", "black");
   } else {
     songs = english;
-    $(".left-pannel__favorite").text("_English");
+    $(".left-pannel__favorite").text("_我的翻唱");
     $(".left-pannel__favorite").css("color", currentProfile.accentColor);
-    $(".left-pannel__anime").text("Hindi");
+    $(".left-pannel__anime").text("Other");
     $(".left-pannel__anime").css("color", "black");
   }
 
