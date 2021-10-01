@@ -30,17 +30,17 @@ var songs,
   english = [
     {
       name: "有何不可",
-      singer: "",
+      singer: "没有什么风格，希望你快乐，你大爷的。2021.09.23",
       duration: "02:25",
-      url: "songs/有何不可.mp3",
+      url: "songs/16 有何不可.mp3",
       albumArt: "images/14.jpeg",
     },
 
     {
       name: "纸短情长，花开陌上",
-      singer: "",
+      singer: "2019.02.27",
       duration: "02:28",
-      url: "songs/14 纸短情长，花开陌上.mp3",
+      url: "songs/07 纸短情长，花开陌上.mp3",
       albumArt: "images/6.jpeg",
     },
 
