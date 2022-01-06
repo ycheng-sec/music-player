@@ -29,167 +29,38 @@ var isDrawerOpen = false,
 var songs,
   english = [
     {
+      name: "不如",
+      singer: "2022.01.18. 春风十里扬州路，卷上珠帘总不如。",
+      duration: "02:14",
+      url: "songs/19 不如.mp3",
+      albumArt: "images/15.jpeg",
+    },
+
+    {
       name: "有何不可",
-      singer: "没有什么风格，希望你快乐，你大爷的。2021.09.23",
+      singer: "2021.09.23. 没有什么风格，希望你快乐，你大爷的。",
       duration: "02:25",
-      url: "songs/16 有何不可.mp3",
+      url: "songs/17 有何不可.mp3",
       albumArt: "images/14.jpeg",
     },
 
     {
       name: "纸短情长，花开陌上",
-      singer: "2019.02.27",
+      singer: "2019.02.27. 纸短情长，花开陌上，谢谢你。",
       duration: "02:28",
-      url: "songs/07 纸短情长，花开陌上.mp3",
+      url: "songs/09 纸短情长，花开陌上.mp3",
       albumArt: "images/6.jpeg",
     },
-
     {
-      name: "End Of Time",
-      singer: "Alan Walker",
-      duration: "03:05",
-      url: "songs/End_Of_Time.mp3",
-      albumArt: "images/End_Of_Time.jpg",
-    },
-//
-//    {
-//      name: "Alone Part II",
-//      singer: "Alan Walker",
-//      duration: "02:57",
-//      url: "songs/Alone_Part_II.mp3",
-//      albumArt: "images/Alone_Part_II.jpg",
-//    },
-//
-//    {
-//      name: "Sing Me To Sleep",
-//      singer: "Alan Walker",
-//      duration: "03:11",
-//      url: "songs/Sing_Me_To_Sleep.mp3",
-//      albumArt: "images/Sing_Me_To_Sleep.jpg",
-//    },
-//
-//    {
-//      name: "Ignite",
-//      singer: "Alan Walker",
-//      duration: "03:30",
-//      url: "songs/Ignite.mp3",
-//      albumArt: "images/Ignite.jpg",
-//    },
-//
-//    {
-//      name: "Faded",
-//      singer: "Alan Walker",
-//      duration: "03:32",
-//      url: "songs/Faded.mp3",
-//      albumArt: "images/Faded.jpg",
-//    },
-//
-//    {
-//      name: "Keep Holding On",
-//      singer: "Avril Lavigne",
-//      duration: "04:12",
-//      url: "songs/Keep_Holding_On.mp3",
-//      albumArt: "images/Keep_Holding_On.jpg",
-//    },
-//
-//    {
-//      name: "Give your heart a break",
-//      singer: "Demi Lovato",
-//      duration: "03:28",
-//      url: "songs/Give_Your_Heart_a_Break.mp3",
-//      albumArt: "images/Give_Your_Heart_a_Break.jpg",
-//    },
-//
-//    {
-//      name: "You are not alone",
-//      singer: "Michael Jackson",
-//      duration: "05:35",
-//      url: "songs/You_Are_Not_Alone.mp3",
-//      albumArt: "images/You_Are_Not_Alone.jpg",
-//    },
-//
-//    {
-//      name: "Skyscraper",
-//      singer: "Demi Lovato",
-//      duration: "03:11",
-//      url: "songs/Skyscraper.mp3",
-//      albumArt: "images/Skyscraper.jpg",
-//    },
-//
-//    {
-//      name: "Innocence",
-//      singer: "Avril Lavigne",
-//      duration: "03:50",
-//      url: "songs/Innocence.mp3",
-//      albumArt: "images/Keep_Holding_On.jpg",
-//    },
-//
-//    {
-//      name: "Wish you were here",
-//      singer: "Avril Lavigne",
-//      duration: "03:50",
-//      url: "songs/Wish_You_Were_Here.mp3",
-//      albumArt: "images/Wish_You_Were_Here.jpg",
-//    },
-//
-//    {
-//      name: "Heart Attack",
-//      singer: "Demi Lovato",
-//      duration: "03:29",
-//      url: "songs/Heart_Attack.mp3",
-//      albumArt: "images/Heart_Attack.jpg",
-//    },
-//
-//    {
-//      name: "Legends Never Die",
-//      singer: "Alan Walker",
-//      duration: "02:45",
-//      url: "songs/Legends_Never_Die.mp3",
-//      albumArt: "images/Legends_Never_Die.jpg",
-//    },
-//
-//    {
-//      name: "",
-//      singer: "",
-//      duration: "",
-//      url: "",
-//      albumArt: "",
-//    },
+      name: "纸短情长，花开陌上",
+      singer: "2019.02.27. 纸短情长，花开陌上，谢谢你。",
+      duration: "02:28",
+      url: "songs/09 纸短情长，花开陌上.mp3",
+      albumArt: "images/6.jpeg",
+    }
   ];
 
-var korean = [
-
-    {
-    name: "Tajdar-e-Haram",
-    singer: "Atif Aslam",
-    duration: "09:51",
-    url: "songs/Hindi/Tajdar-e-Haram_Atif_Aslam.mp3",
-    albumArt: "images/hindi/taj.jpg",
-    },
-//
-//  {
-//    name: "Arziyan",
-//    singer: "Jawed Ali",
-//    duration: "08:42",
-//    url: "",
-//    albumArt: "",
-//  },
-//
-//  {
-//    name: "Rang Sharbato ka",
-//    singer: "Atfi Aslam",
-//    duration: "04:23",
-//    url: "",
-//    albumArt: "",
-//  },
-//  {
-//    name: "",
-//    singer: "",
-//    duration: "",
-//    url: "",
-//    albumArt: "",
-//  },
-];
+var korean = [];
 
 var currentProfile = {
   name: "",
@@ -473,7 +344,7 @@ function generateElements(ko) {
 
   $(".cards-holder").html(cards);
 
-  for (var i = 0; i < songs.length - 1; i++) {
+  for (var i = 0; i < songs.length-1; i++) {
     songList =
       songList +
       `<div class="song-list" onclick="playSong(` +
@@ -559,7 +430,7 @@ window.onerror = function () {
 
 function nextSong() {
   var songId = 0;
-  if (currentProfile.id == songs.length - 2) songId = 0;
+  if (currentProfile.id == songs.length - 1) songId = 0;
   else songId = currentProfile.id + 1;
   playSong(songId, true);
   setCurrentProfile(songId);
@@ -573,7 +444,7 @@ function nextSong() {
 
 function prevSong() {
   var songId = 0;
-  if (currentProfile.id == 0) songId = songs.length - 2;
+  if (currentProfile.id == 0) songId = songs.length - 1;
   else songId = currentProfile.id - 1;
   playSong(songId, true);
   setCurrentProfile(songId);
