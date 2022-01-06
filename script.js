@@ -378,13 +378,13 @@ function generateElements(ko) {
 function playSong(songId, checkPause) {
   var card = document.getElementsByClassName("card");
 
-  if (checkPause == undefined)
-    if (currentProfile.name == songs[songId].name) {
-      songListDuration[songId].style.color = currentProfile.accentColor;
-      card[songId].style.color = currentProfile.accentColor;
-      playPause();
-      return;
-    }
+  // if (checkPause == undefined)
+  //   if (currentProfile.name == songs[songId].name) {
+  //     songListDuration[songId].style.color = currentProfile.accentColor;
+  //     card[songId].style.color = currentProfile.accentColor;
+  //     playPause();
+  //     return;
+  //   }
   if (currentProfile.id != songId) {
     songListDuration[songId].style.color = currentProfile.accentColor;
     songListDuration[currentProfile.id].style.color = "grey";
@@ -430,7 +430,7 @@ window.onerror = function () {
 
 function nextSong() {
   var songId = 0;
-  if (currentProfile.id == songs.length - 1) songId = 0;
+  if (currentProfile.id == songs.length - 2) songId = 0;
   else songId = currentProfile.id + 1;
   playSong(songId, true);
   setCurrentProfile(songId);
@@ -444,7 +444,7 @@ function nextSong() {
 
 function prevSong() {
   var songId = 0;
-  if (currentProfile.id == 0) songId = songs.length - 1;
+  if (currentProfile.id == 0) songId = songs.length - 2;
   else songId = currentProfile.id - 1;
   playSong(songId, true);
   setCurrentProfile(songId);
