@@ -37,13 +37,26 @@ var songs,
     },
 
     {
+      name: "有生之年",
+      singer: "2021.10.13. 愿你因为爱情遇到最想要的人，愿你富甲一方不再被现实所困。",
+      duration: "02:49",
+      url: "songs/18 有生之年.mp3",
+      albumArt: "images/7.jpeg",
+    },
+    {
       name: "有何不可",
       singer: "2021.09.23. 没有什么风格，希望你快乐，你大爷的。",
       duration: "02:25",
       url: "songs/17 有何不可.mp3",
       albumArt: "images/14.jpeg",
     },
-
+    {
+      name: "静悄悄",
+      singer: "2020.02.14. 静悄悄的爱了，静悄悄的，会不会就不爱了？",
+      duration: "02:59",
+      url: "songs/13 静悄悄.mp3",
+      albumArt: "images/10.1.jpg",
+    },
     {
       name: "纸短情长，花开陌上",
       singer: "2019.02.27. 纸短情长，花开陌上，谢谢你。",
