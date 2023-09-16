@@ -163,7 +163,57 @@ var songs,
     }
   ];
 
-var korean = [];
+var korean = [
+  {
+  name: "01 爱久见人心",
+  singer: "2015",
+  duration: "02:14",
+  url: "songs/01 爱久见人心.mp3",
+  albumArt: "images/00.jpg",
+    },
+  {
+    name: "02 多远都要在一起",
+    singer: "2015.04",
+    duration: "03:34",
+    url: "songs/02 多远都要在一起.mp3",
+    albumArt: "images/00.jpg",
+  },
+  {
+    name: "03 小幸运",
+    singer: "2015.11",
+    duration: "02:27",
+    url: "songs/03 小幸运.mp3",
+    albumArt: "images/00.jpg",
+  },
+  {
+    name: "04 可惜没如果",
+    singer: "2016",
+    duration: "03:50",
+    url: "songs/04 可惜没如果.mp3",
+    albumArt: "images/00.jpg",
+  },
+  {
+    name: "05 忽然之间",
+    singer: "2015.08",
+    duration: "02:18",
+    url: "songs/05 忽然之间.mp3",
+    albumArt: "images/00.jpg",
+  },
+  {
+    name: "06 成全",
+    singer: "x",
+    duration: "03:37",
+    url: "songs/06 成全.mp3",
+    albumArt: "images/00.jpg",
+  },
+  {
+    name: "07 老男孩",
+    singer: "2015",
+    duration: "02:52",
+    url: "songs/07 老男孩.mp3",
+    albumArt: "images/00.jpg",
+  }
+];
 
 var currentProfile = {
   name: "",
@@ -405,15 +455,15 @@ function generateElements(ko) {
 
   if (ko) {
     songs = korean;
-    $(".left-pannel__anime").text("_我的翻唱2");
+    $(".left-pannel__anime").text("_Ukulele");
     $(".left-pannel__anime").css("color", currentProfile.accentColor);
-    $(".left-pannel__favorite").text("我的翻唱1");
+    $(".left-pannel__favorite").text("Guitar");
     $(".left-pannel__favorite").css("color", "black");
   } else {
     songs = english;
-    $(".left-pannel__favorite").text("_我的翻唱1");
+    $(".left-pannel__favorite").text("_Guitar");
     $(".left-pannel__favorite").css("color", currentProfile.accentColor);
-    $(".left-pannel__anime").text("我的翻唱2");
+    $(".left-pannel__anime").text("Ukulele");
     $(".left-pannel__anime").css("color", "black");
   }
 
