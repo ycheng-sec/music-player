@@ -29,47 +29,137 @@ var isDrawerOpen = false,
 var songs,
   english = [
     {
-      name: "不如",
-      singer: "2022.01.18. 春风十里扬州路，卷上珠帘总不如。",
-      duration: "02:14",
-      url: "songs/19 不如.mp3",
+      name: "01 追光者",
+      singer: "2018",
+      duration: "02:58",
+      url: "songs/01 追光者.mp3",
+      albumArt: "images/01.jpg",
+    },
+    {
+      name: "02 我要你",
+      singer: "2018",
+      duration: "02:29",
+      url: "songs/02 我要你.mp3",
+      albumArt: "images/02.jpeg",
+    },
+    {
+      name: "03 成都",
+      singer: "2017",
+      duration: "03:58",
+      url: "songs/03 成都.mp3",
+      albumArt: "images/03.jpeg",
+    },
+    {
+      name: "04 500 Miles",
+      singer: "x",
+      duration: "03:44",
+      url: "songs/04 500 Miles.mp3",
+      albumArt: "images/04.jpeg",
+    },
+    {
+      name: "05 奇妙能力歌",
+      singer: "2018. 走调的“明白眼前都是气泡的时候”说明根本没有明白。",
+      duration: "04:05",
+      url: "songs/05 奇妙能力歌.mp3",
+      albumArt: "images/05.jpg",
+    },
+    {
+      name: "06 月亮代表我的心",
+      singer: "x",
+      duration: "02:10",
+      url: "songs/06 月亮代表我的心.mp3",
+      albumArt: "images/00.jpg",
+    },
+    {
+      name: "07 往后余生",
+      singer: "2018.08.05. 余生很长，请多关照。",
+      duration: "03:06",
+      url: "songs/07 往后余生.mp3",
+      albumArt: "images/07.png",
+    },
+    {
+      name: "08 遇见他的第一百天",
+      singer: "2018.09.22. 自弹自唱自填词自跑调。",
+      duration: "03:18",
+      url: "songs/08 遇见他的第一百天.mp3",
+      albumArt: "images/08.jpeg",
+    },
+    {
+      name: "09 纸短情长，花开陌上",
+      singer: "2019.02.27. 纸短情长，花开陌上，谢谢你。",
+      duration: "02:28",
+      url: "songs/09 纸短情长，花开陌上.mp3",
+      albumArt: "images/09.jpeg",
+    },
+    {
+      name: "10 认真地老去",
+      singer: "2019.03.31. 感谢一呆的倾情演绎和设备支持。",
+      duration: "04:10",
+      url: "songs/10 认真地老去.mp3",
+      albumArt: "images/10.jpeg",
+    },
+    {
+      name: "11 夜空中最亮的星",
+      singer: "2019.08.05. 做彼此最亮的那颗星。",
+      duration: "04:08",
+      url: "songs/11 夜空中最亮的星.mp3",
+      albumArt: "images/11.jpeg",
+    },
+    {
+      name: "12 有可能的夜晚",
+      singer: "2019.10.13. 歌，也就是唱唱罢了。",
+      duration: "02:06",
+      url: "songs/12 有可能的夜晚.mp3",
+      albumArt: "images/12.jpeg",
+    },
+    {
+      name: "13 静悄悄",
+      singer: "2020.02.14. 静悄悄的爱了，静悄悄的，会不会就不爱了？",
+      duration: "02:59",
+      url: "songs/13 静悄悄.mp3",
+      albumArt: "images/13.jpg",
+    },
+    {
+      name: "14 一如年少模样",
+      singer: "2020.05.20. 故事易写，年岁难唱，最是此刻不枉。",
+      duration: "03:44",
+      url: "songs/14 一如年少模样.mp3",
+      albumArt: "images/14.jpeg",
+    },
+    {
+      name: "15 极美",
+      singer: "2020.08.05. 能相聚已是极美。我们下次在小王子发色的麦田里欢庆吧？",
+      duration: "03:30",
+      url: "songs/15 极美.mp3",
       albumArt: "images/15.jpeg",
     },
-
     {
-      name: "有生之年",
+      name: "16 世间美好与你环环相扣",
+      singer: "2021.01.01. 只愿世间美好与你环环相扣。",
+      duration: "03:00",
+      url: "songs/16 世间美好与你环环相扣.mp3",
+      albumArt: "images/16.jpeg",
+    },
+    {
+      name: "17 有何不可",
+      singer: "2021.09.23. 没有什么风格，希望你快乐，你大爷的。",
+      duration: "02:25",
+      url: "songs/17 有何不可.mp3",
+      albumArt: "images/17.jpeg",
+    },
+    {
+      name: "18 有生之年",
       singer: "2021.10.13. 愿你因为爱情遇到最想要的人，愿你富甲一方不再被现实所困。",
       duration: "02:49",
       url: "songs/18 有生之年.mp3",
       albumArt: "images/7.jpeg",
     },
     {
-      name: "有何不可",
-      singer: "2021.09.23. 没有什么风格，希望你快乐，你大爷的。",
-      duration: "02:25",
-      url: "songs/17 有何不可.mp3",
-      albumArt: "images/14.jpeg",
-    },
-    {
-      name: "静悄悄",
-      singer: "2020.02.14. 静悄悄的爱了，静悄悄的，会不会就不爱了？",
-      duration: "02:59",
-      url: "songs/13 静悄悄.mp3",
-      albumArt: "images/10.1.jpg",
-    },
-    {
-      name: "纸短情长，花开陌上",
-      singer: "2019.02.27. 纸短情长，花开陌上，谢谢你。",
-      duration: "02:28",
-      url: "songs/09 纸短情长，花开陌上.mp3",
-      albumArt: "images/6.jpeg",
-    },
-    {
-      name: "纸短情长，花开陌上",
-      singer: "2019.02.27. 纸短情长，花开陌上，谢谢你。",
-      duration: "02:28",
-      url: "songs/09 纸短情长，花开陌上.mp3",
-      albumArt: "images/6.jpeg",
+      name: "19 不如",
+      singer: "2022.01.18. 春风十里扬州路，卷上珠帘总不如。",
+      duration: "02:14",
+      url: "songs/19 不如.mp3",
+      albumArt: "images/19.jpeg",
     }
   ];
 
@@ -315,15 +405,15 @@ function generateElements(ko) {
 
   if (ko) {
     songs = korean;
-    $(".left-pannel__anime").text("_Other");
+    $(".left-pannel__anime").text("_我的翻唱2");
     $(".left-pannel__anime").css("color", currentProfile.accentColor);
-    $(".left-pannel__favorite").text("我的翻唱");
+    $(".left-pannel__favorite").text("我的翻唱1");
     $(".left-pannel__favorite").css("color", "black");
   } else {
     songs = english;
-    $(".left-pannel__favorite").text("_我的翻唱");
+    $(".left-pannel__favorite").text("_我的翻唱1");
     $(".left-pannel__favorite").css("color", currentProfile.accentColor);
-    $(".left-pannel__anime").text("Other");
+    $(".left-pannel__anime").text("我的翻唱2");
     $(".left-pannel__anime").css("color", "black");
   }
 
