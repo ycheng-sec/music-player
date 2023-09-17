@@ -160,6 +160,13 @@ var songs,
       duration: "02:14",
       url: "songs/19 不如.mp3",
       albumArt: "images/19.jpeg",
+    },
+    {
+      name: "place holder",
+      singer: "2022.01.18. 春风十里扬州路，卷上珠帘总不如。",
+      duration: "02:14",
+      url: "songs/19 不如.mp3",
+      albumArt: "images/19.jpeg",
     }
   ];
 
@@ -212,6 +219,13 @@ var korean = [
     duration: "02:52",
     url: "songs/07 老男孩.mp3",
     albumArt: "images/00.jpg",
+  },
+  {
+    name: "place holder",
+    singer: "2022.01.18. 春风十里扬州路，卷上珠帘总不如。",
+    duration: "02:14",
+    url: "songs/19 不如.mp3",
+    albumArt: "images/19.jpeg",
   }
 ];
 
